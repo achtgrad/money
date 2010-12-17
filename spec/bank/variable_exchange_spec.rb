@@ -118,7 +118,7 @@ describe Money::Bank::VariableExchange do
 
       describe 'with unknown format' do
         it 'should raise `UnknownRateFormat`' do
-          lambda{@bank.export_rates(:foo)}.should raise_error Money::Bank::UnknownRateFormat
+          lambda{@bank.export_rates(:foo)}.should raise_error(Money::Bank::UnknownRateFormat)
         end
       end
 
@@ -163,7 +163,7 @@ describe Money::Bank::VariableExchange do
 
       describe 'with unknown format' do
         it 'should raise `UnknownRateFormat`' do
-          lambda{@bank.import_rates(:foo, "")}.should raise_error Money::Bank::UnknownRateFormat
+          lambda{@bank.import_rates(:foo, "")}.should raise_error(Money::Bank::UnknownRateFormat)
         end
       end
     end

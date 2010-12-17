@@ -34,8 +34,8 @@ describe Money::Currency do
   end
 
   specify "#eql? should return true if #== returns true" do
-    Money::Currency.new(:eur).eql?(Money::Currency.new(:eur)).should be true
-    Money::Currency.new(:eur).eql?(Money::Currency.new(:usd)).should be false
+    Money::Currency.new(:eur).eql?(Money::Currency.new(:eur)).should be_true
+    Money::Currency.new(:eur).eql?(Money::Currency.new(:usd)).should be_false
   end
 
   specify "#hash should return the same value for equal objects" do
